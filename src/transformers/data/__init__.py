@@ -20,8 +20,16 @@ from .processors import (
     xnli_output_modes,
     xnli_processors,
     xnli_tasks_num_labels,
+
+    # opioid question answering imports
+    opioid_qa_convert_examples_to_features,
+    OpioidProcessor,
+    opioid_qa_processors,
+    opioid_qa_output_modes,
+    opioid_qa_num_labels
+
 )
 
 
 if is_sklearn_available():
-    from .metrics import glue_compute_metrics, xnli_compute_metrics
+    from .metrics import glue_compute_metrics, xnli_compute_metrics, compute_accuracy_metrics
