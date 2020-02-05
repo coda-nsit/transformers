@@ -55,6 +55,12 @@ from .data import (
     xnli_output_modes,
     xnli_processors,
     xnli_tasks_num_labels,
+
+    # opioid question answering imports
+    opioid_qa_convert_examples_to_features,
+    opioid_qa_output_modes,
+    opioid_qa_processors,
+    opioid_qa_num_labels,
 )
 
 # Files and general utilities
@@ -125,7 +131,7 @@ logger = logging.getLogger(__name__)  # pylint: disable=invalid-name
 
 
 if is_sklearn_available():
-    from .data import glue_compute_metrics, xnli_compute_metrics
+    from .data import glue_compute_metrics, xnli_compute_metrics, compute_accuracy_metrics
 
 
 # Modeling
